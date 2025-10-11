@@ -4,7 +4,7 @@ Contiene las operaciones fundamentales de la calculadora:
 - Suma
 - Resta
 - Multiplicación
-- División (con control de división por cero)
+- División (con control de división por 0)
 """
 
 
