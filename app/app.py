@@ -1,4 +1,10 @@
-# app/app.py
+"""Aplicación Flask de calculadora básica.
+
+Este módulo define la aplicación web principal que permite realizar 
+operaciones aritméticas simples (suma, resta, multiplicación y división) 
+a través de un formulario HTML. 
+Utiliza funciones definidas en `calculadora.py` para ejecutar las operaciones.
+"""
 from flask import Flask, render_template, request
 from .calculadora import sumar, restar, multiplicar, dividir
 
@@ -7,6 +13,12 @@ app = Flask(__name__)
 
 @app.route("/", methods=["GET", "POST"])
 def index():
+    """Vista principal de la aplicación.
+
+    Muestra un formulario donde el usuario puede ingresar dos números
+    y seleccionar una operación aritmética. Al enviar el formulario,
+    se calcula el resultado y se muestra en la página.
+    """
     resultado = None
     if request.method == "POST":
         try:
