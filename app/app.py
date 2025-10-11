@@ -1,10 +1,11 @@
 """Aplicación Flask de calculadora básica.
 
-Este módulo define la aplicación web principal que permite realizar 
-operaciones aritméticas simples (suma, resta, multiplicación y división) 
-a través de un formulario HTML. 
+Este módulo define la aplicación web principal que permite realizar
+operaciones aritméticas simples (suma, resta, multiplicación y división)
+a través de un formulario HTML.
 Utiliza funciones definidas en `calculadora.py` para ejecutar las operaciones.
 """
+
 from flask import Flask, render_template, request
 from .calculadora import sumar, restar, multiplicar, dividir
 
@@ -46,4 +47,3 @@ def index():
 
 if __name__ == "__main__":  # pragma: no cover
     app.run(debug=True, port=5000, host="0.0.0.0")  # Quitar debug=true
-    

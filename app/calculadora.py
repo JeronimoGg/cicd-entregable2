@@ -6,6 +6,8 @@ Contiene las operaciones fundamentales de la calculadora:
 - Multiplicación
 - División (con control de división por cero)
 """
+
+
 def sumar(a, b):
     """Devuelve la suma de a y b."""
     return a + b
