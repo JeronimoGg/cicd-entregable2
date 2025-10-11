@@ -29,5 +29,5 @@ def dividir(a, b):
     Lanza ZeroDivisionError si b es igual a 0.
     """
     if b == 0:
-        raise ZeroDivisionError("No se puede dividir por cero")
+        raise ZeroDivisionError("No se puede dividir por 0")
     return a / b
