@@ -15,9 +15,11 @@ app = Flask(__name__)
 # Puerto configurable vía variable de entorno (ECS inyecta PORT)
 app_port = int(os.environ.get("PORT", 5000))
 
+
 @app.route("/health")
 def health():
     return "OK", 200
+
 
 @app.route("/", methods=["GET", "POST"])
 def index():
