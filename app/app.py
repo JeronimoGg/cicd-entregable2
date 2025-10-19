@@ -6,11 +6,18 @@ a través de un formulario HTML.
 Utiliza funciones definidas en `calculadora.py` para ejecutar las operaciones.
 """
 
+import os
 from flask import Flask, render_template, request
 from .calculadora import sumar, restar, multiplicar, dividir
 
 app = Flask(__name__)
 
+# Puerto configurable vía variable de entorno (ECS inyecta PORT)
+app_port = int(os.environ.get("PORT", 5000))
+
+@app.route("/health")
+def health():
+    return "OK", 200
 
 @app.route("/", methods=["GET", "POST"])
 def index():
